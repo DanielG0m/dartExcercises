@@ -1,16 +1,15 @@
+import 'dart:io';
+
 void main() {
-  final horasTrabajadas = 40;
+  print('Ingrese el diámetro del círculo:');
+  final diametro = double.parse(stdin.readLineSync()!);
 
-  final salarioHora = 10;
-  final salarioHoraExtra = 15;
+  final pi = 3.1416;
+  final radio = diametro / 2;
 
-  num salarioSemanal;
+  final perimetro = 2 * pi * radio;
+  final area = pi * radio * radio;
 
-  if (horasTrabajadas > 40) {
-    salarioSemanal = 40 * salarioHora;
-    salarioSemanal += (horasTrabajadas - 40) * salarioHoraExtra;
-  } else {
-    salarioSemanal = horasTrabajadas * salarioHora;
-  }
-  print('El salario semanal es de: $salarioSemanal');
+  print('El perímetro es: $perimetro');
+  print('El área es: $area');
 }

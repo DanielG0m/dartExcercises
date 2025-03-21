@@ -1,8 +1,10 @@
+import 'dart:io';
 void main() {
-  final temperatura = 11;
+  print('Ingrese la temperatura:');
+  final temperatura = double.parse(stdin.readLineSync()!);
 
   if (temperatura <= 10) {
-    print('Clima frio');
+    print('Clima frío');
   } else if (temperatura >= 11 && temperatura <= 20) {
     print('Clima templado');
   } else if (temperatura >= 21 && temperatura <= 30) {
